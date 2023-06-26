@@ -1,0 +1,10 @@
+@media screen and (max-width: 425px) {
+  header {
+    flex-direction: column;
+    font-size: small;
+  }
+
+  a {
+    padding: 5px;
+  }
+}

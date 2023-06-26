@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Para Suavisar a fonte */
+  -webkit-font-smoothing: antialiased;
+  /* Suavização da fonte para navegadores Webkit */
+  -moz-osx-font-smoothing: grayscale;
+  /* Suavização da fonte para navegadores Webkit */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(to right bottom, #0d0d0d, #1f202a, #2c3449, #334a6a, #32628c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(13, 13, 13, 0.5);
+  padding: 20px;
+  text-align: center;  
+  color: rgba(191,191,191);
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+}
+
+header a {
+  text-decoration: none;
+  color: rgba(191,191,191);
+  transition: 0.8s;
+}
+
+header a:hover {
+  color: rgba(242,242,242);
+  letter-spacing: 2px;
+  transition: 0.8s;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: rgba(13, 13, 13, 0.5);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
