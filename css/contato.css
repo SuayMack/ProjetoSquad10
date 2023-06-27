@@ -1,19 +1,64 @@
+/* section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
+  gap: 20px;
   padding: 20px;
   color: rgba(191,191,191);
   border: 10px solid rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+} */
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
 }
+
+.card {
+  width: 150px;
+  height: 150px;
+  
+  overflow: hidden;
+  transition: .8s;
+} 
+
+.card:hover {
+  width: 280px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  color: rgba(191,191,191);
+  background: rgba(255, 255, 255, 0.05);
+  margin: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: .8s;
+} 
 
 figure {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 5px;
+  row-gap: 15px;
+}
+
+.redes-sociais {
+  display: flex;
+    width: 50%;
+    justify-content: space-evenly;
 }
 
 img.foto{
@@ -29,10 +74,5 @@ img.foto{
 
 img.icone {
   width: 30px;
-  height: 30px;
-  
-}
-
-svg {
-  
+  height: 30px;  
 }
