@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 20px;
+  color: rgba(191,191,191);
+  border: 10px solid rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+}
+
+img.foto{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+  color: rgba(191,191,191);
+}
+
+img.icone {
+  width: 30px;
+  height: 30px;
+  
+}
+
+svg {
+  
+}
