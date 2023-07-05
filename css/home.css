@@ -1,36 +1,19 @@
-main {  
-  color: rgba(191,191,191);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h2 {
-  font-size: xx-large;
-  font-weight: 300;
-  letter-spacing: 6px;
-  padding: 20px;
-}
-
 section {
-  width: 85%;
-  height: 85%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-}
-
-div {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 
-.tempo h2 {
-  font-size: 3rem;
+span, h2 {
+  color: rgba(191,191,191);
 }
 
-.tempo span {
-  font-size: 2rem;
+.flipTimer {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
