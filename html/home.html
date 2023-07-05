@@ -6,7 +6,13 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/mediaHome.css">
     <link rel="stylesheet" href="../css/home.css">
+
+    <link href="../css/flipTimer.css" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../js/jquery.flipTimer.js"></script>
  
     <title></title>
   </head>
@@ -22,36 +28,25 @@
       </nav>      
     </header>
     <main>      
-      <h2>Suas aulas começam em</h2>
-      
-      <section>   
-
-        <div class="tempo">
-          <h2 id="dias">00</h2>
-          <span>Dias</span>          
-        </div>          
-      
-        <div class="tempo">
-          <h2 id="horas">00</h2>
-          <span>Horas</span>          
+      <section>
+        <h2>SUAS AULAS COMEÇAM EM</h2>
+        <div class="flipTimer">
+          <div class="days"></div>
+          <span>:</span>
+          <div class="hours"></div>
+          <span>:</span>
+          <div class="minutes"></div>
+          <span>:</span>
+          <div class="seconds"></div>
         </div>        
-
-        <div class="tempo">
-          <h2 id="minutos">00</h2>          
-          <span>Minutos</span>
-        </div>
-
-        <div class="tempo">
-          <h2 id="segundos">00</h2>          
-          <span>Segundos</span>
-        </div>
-        
       </section>
     </main>
     <footer>
       <p>Feito com 💙 por Squad 10.</p>
     </footer>
-    <script src="../js/home.js"></script>
+    <script src="../js/home.js">
+      
+    </script>
   </body>
   
 </html>
