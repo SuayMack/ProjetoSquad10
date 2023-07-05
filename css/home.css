@@ -1,3 +1,15 @@
+#aulas:before {
+  content: "Aulas";
+}
+
+#configuracoes:before {
+  content: "Configurações";
+}
+
+#aulas:hover:before, #configuracoes:hover:before {
+  content: "Em Breve"
+}
+
 section {
   height: 100%;
   display: flex;
@@ -8,6 +20,29 @@ section {
 
 span, h2 {
   color: rgba(191,191,191);
+}
+
+h2 {
+  letter-spacing: 5px;
+  font-weight: 500;
+  
+	transform: scale(1);
+	animation: pulse 2s infinite;
+  transition: .5s;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0.95);
+	}
 }
 
 .flipTimer {
