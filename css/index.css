@@ -35,7 +35,10 @@
     color: rgba(191,191,191);
     height:600px;
   }
-  
+ .content p {
+    text-align: justify;
+    padding: 20px;
+  }
   .button {
     display: inline-block;
     background-color: #011a35;
