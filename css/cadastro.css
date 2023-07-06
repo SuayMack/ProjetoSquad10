@@ -57,6 +57,7 @@ body {
     border: none;
     border-radius: 15px;
     font-size: 15px;
+    align-items: center;
   }
   
   .row {
