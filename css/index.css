@@ -1,55 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
-  body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to right bottom, #0d0d0d, #1f202a, #2c3449, #334a6a, #32628c);
     font-family: 'Inter', sans-serif;
     color: white;
-  }
+}
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(13, 13, 13, 0.5);
-    padding: 20px;
-    text-align: center;  
-    color: rgba(191,191,191);
-  }
-   
-  main {
+header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(13, 13, 13, 0.5);
+        padding: 10px;
+        text-align: center;  
+        color: rgba(191,191,191);
+      }
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-  
-  .banner {
+}
+
+.banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    text-align: center;  
-    color: rgba(191,191,191);
-    height:600px;
-  }
- .content p {
+    text-align: center;
+    color: white
+    height: 500px;
+    font-family: 'Inter', sans-serif;
+   font-size: 20px;
+}
+
+.content p {
     text-align: justify;
     padding: 20px;
-  }
-  .button {
+}
+
+.button {
     display: inline-block;
     background-color: #011a35;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 4px;
-     border: 1px solid #007bff; /* Adicionar borda */
-  }
+    border: 1px solid #007bff;
+}
 
-  .button-enter{
+.button-enter {
     display: inline-block;
     background-color: #011a35;
     color: #fff;
@@ -57,29 +61,29 @@
     text-decoration: none;
     border-radius: 4px;
     border: #fff;
-    margin-right: 10px; /* Adicionar margem à direita para separar da imagem */
-    border: 1px solid #007bff; /* Adicionar borda */
-  }
-  
+    margin-right: 10px;
+    border: 1px solid #007bff;
+}
+
 .image-container {
-    display: flex; /* Adicionar display flex para alinhar as imagens lado a lado */
-    justify-content: center; /* Alinhar as imagens horizontalmente */
-    box-shadow: inset 0 0 20px gray;
-
-  }
-  
-  .image {
-    width: 300px;
-    height: auto;
-    padding: 5px;
+    display: flex;
+    justify-content: center;
+    box-shadow: inset 0 0 100px gray;
     border-radius: 10px;
+}
+
+.image {
+    width: 230px;
+    height: 600px;
+    padding: 5px;
+    border-radius: 20px;
     border: #fff;
-  }
-  
+}
+
 footer {
     background-color: rgba(13, 13, 13, 0.5);
     color: #fff;
     padding: 20px;
     text-align: center;
     width: 100%;
-  }
+}
