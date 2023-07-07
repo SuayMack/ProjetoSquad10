@@ -10,7 +10,7 @@
   -moz-osx-font-smoothing: grayscale;
   /* Suavização da fonte para navegadores Webkit */
 }
-
+/* Estilos do body */
 body {
   display: flex;
   flex-direction: column;
@@ -22,6 +22,7 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+/* Estilos do header */
 header {
   display: flex;
   justify-content: space-between;
@@ -32,6 +33,7 @@ header {
   color: rgba(191, 191, 191);
 }
 
+/* Estilos do header nav */
 header nav {
   display: flex;
   align-items: center;
@@ -39,18 +41,21 @@ header nav {
   width: 80%;
 }
 
+/* Estilos dos links do header */
 header a {
   text-decoration: none;
   color: rgba(191, 191, 191);
   transition: 0.8s;
 }
 
+/* Estilos dos links do header ao passar o mouse */
 header a:hover {
   color: rgba(242, 242, 242);
   letter-spacing: 2px;
   transition: 0.8s;
 }
 
+/* Estilos das seções */
 section {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -63,6 +68,7 @@ section {
   font-size: 15px;
 }
 
+/* Estilos dos parágrafos das seções */
 section p {
   text-align: justify;
   font-size: 20px;
@@ -71,6 +77,7 @@ section p {
   height: 400px;
 }
 
+/* Estilos do elemento .selecione */
 .selecione {
   font-family: 'Inter', sans-serif;
   color: white;
@@ -80,11 +87,13 @@ section p {
   align-items: center;
 }
 
+/* Estilos do elemento .row */
 .row {
   border: none;
   font-family: 'Inter', sans-serif;
 }
 
+/* Estilos do botão */
 .btn {
   display: inline-block;
   background-color: #011a35;
@@ -96,6 +105,7 @@ section p {
   border-radius: 10px;
 }
 
+/* Estilos do footer */
 footer {
   background-color: rgba(13, 13, 13, 0.5);
   color: #fff;
