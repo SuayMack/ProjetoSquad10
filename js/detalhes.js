@@ -6,6 +6,11 @@ const descricao2 = "Combo de inglês e espanhol: Oferece aulas de inglês e espa
 const plano3 = document.getElementById("plano3");
 const descricao3 = "Plano de Inglês para negócios: Um plano voltado para profissionais que desejam aprimorar seu inglês específico para o ambiente de negócios. O plano pode incluir aulas individuais com professores especializados em inglês para negócios, oportunidades de prática de apresentações e discussões sobre casos de negócios.";
 const original1=document.getElementById("card1");
+//armazena o conteúdo do card antes da mudança 
+const conteudoDiv= plano1.innerHTML;
+const conteudoDiv2= plano2.innerHTML;
+const conteudoDiv3= plano3.innerHTML;
+
 
 // Evento quando o cursor entra no elemento
 plano1.addEventListener("mouseenter", function() {
