@@ -30,26 +30,28 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
     color: white;
     height: 500px;
     font-family: 'Inter', sans-serif;
-   font-size: 20px;
-}
-
-.content p {
+    font-size: 20px;
+    line-height: 1.5; /* Adicione esta linha para definir o espaçamento entre as linhas */
+  }
+  
+  .content p {
     text-align: justify;
     padding: 20px;
-}
-
+    line-height: 1.5; /* Adicione esta linha para definir o espaçamento entre as linhas */
+  }
+  
 .button {
     display: inline-block;
     background-color: #011a35;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 10px;
     border: 1px solid #007bff;
 }
 
@@ -59,7 +61,7 @@ main {
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 10px;
     border: #fff;
     margin-right: 10px;
     border: 1px solid #007bff;
@@ -68,17 +70,17 @@ main {
 .image-container {
     display: flex;
     justify-content: center;
-    box-shadow: inset 0 0 100px gray;
+    box-shadow: 0 0 40px rgba(214, 193, 193, 0.5); /* Adicione esta linha para criar uma sombra */
     border-radius: 10px;
-}
-
-.image {
+  }
+  
+  .image {
     width: 230px;
     height: 600px;
     padding: 5px;
     border-radius: 20px;
     border: #fff;
-}
+  }
 
 footer {
     background-color: rgba(13, 13, 13, 0.5);
