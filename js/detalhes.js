@@ -20,3 +20,8 @@ function juntaTudo(plano,descricao,conteudo){
     plano.innerHTML=conteudo;
   })
   }
+
+  //chamando os objetos
+juntaTudo(plano1,descricao1,conteudoDiv);
+juntaTudo(plano2,descricao2,conteudoDiv2);
+juntaTudo(plano3,descricao3,conteudoDiv3);
