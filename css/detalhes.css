@@ -2,34 +2,6 @@ body{
   color: rgba(191,191,191);
 }
 
-/* #original1:before{
-  content: "Aulas Online", "Exercícios", "Ebook de Gramática";
-} */
-/* 
-
-#aulasOnline:before{
-  content: "Aulas Online";
-}
-#exercicios:before{
-  content:"Exercícios";
-}
-#ebook:before{
-  content:"Ebook de Gramática";
-}
-
-#original1:hover:before{
-content: "Plano de inglês básico: Oferece aulas de inglês básico para alunos que estão iniciando no aprendizado do idioma. Esse plano inclui aulas online, materiais de estudo e exercícios de fixação.";
-}
-
-#aulasOnline:hover:before,
-#exercicios:hover:before,
-#ebook:hover:before{
-  content:""
-} */
-
-/* 
-quando ul for hover display none nas li's */
-
 section {
   display: flex;
   flex-wrap: nowrap;
