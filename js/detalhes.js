@@ -11,26 +11,12 @@ const conteudoDiv= plano1.innerHTML;
 const conteudoDiv2= plano2.innerHTML;
 const conteudoDiv3= plano3.innerHTML;
 
-
-// Evento quando o cursor entra no elemento
-plano1.addEventListener("mouseenter", function() {
-  plano1.innerHTML = descricao1;
-});
-// Evento quando o cursor sai do elemento
-plano1.addEventListener("mouseleave", function() {
-  plano1.innerHTML = conteudoDiv;
-});
-
-plano2.addEventListener("mouseenter", function() {
-  plano2.innerHTML = descricao2;
-});
-plano2.addEventListener("mouseleave", function() {
-  plano2.innerHTML = conteudoDiv2;
-});
-
-plano3.addEventListener("mouseenter", function() {
-  plano3.innerHTML = descricao3;
-});
-plano3.addEventListener("mouseleave", function() {
-  plano3.innerHTML = conteudoDiv3;
-});
+//plano, descricao=depois, conteudo=antes
+function juntaTudo(plano,descricao,conteudo){
+  plano.addEventListener("mouseenter",function(){
+    plano.innerHTML=descricao;
+  })
+  plano.addEventListener("mouseleave",function(){
+    plano.innerHTML=conteudo;
+  })
+  }
