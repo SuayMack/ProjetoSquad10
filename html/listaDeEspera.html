@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/listaDeEspera.css">
+  <link rel="stylesheet" href="../css/mediaListaDeEspera.css">
+ 
+
+  <title>Cadastro</title>
+</head>
+
+<body>
+  <header id="nav">
+    <h1>WORDSTREAM</h1>
+    <span class="material-symbols-outlined">
+    </span>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./html/detalhe.html">Detalhes</a>
+      <a href="../html/cadastro.html">Cadastro</a>
+      <a href="../html/listaDeEspera.html">Contato</a>
+      <a href="./html/login.html">Login</a>
+    </nav>
+  </header>
+  <main>
+
+    <section>
+      <p>
+        Você quer expandir seus horizontes?
+        Não perca a oportunidade de se cadastrar em nosso curso, oferecemos diversos pacotes.
+        Inscreva-se agora em nossa lista de espera para saber mais sobre nossos planos e preços.
+
+      </p>
+
+      <form id="formEndereco" class="row g-3">
+        <div class="col-md-6">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="nome" class="form-control" id="nome">
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="col-md-6">
+          <label for="senha" class="form-label">Senha</label>
+          <input type="senha" class="form-control" id="senha">
+        </div>
+        <div class="col-md-6">
+          <label for="ConfSenha" class="form-label">Confirmação de senha</label>
+          <input type="ConfSenha" class="form-control" id="ConfSenha">
+        </div>
+        <div class="col-md-6">
+          <label for="rg" class="form-label">RG</label>
+          <input type="rg" class="form-control" id="rg">
+        </div>
+        <div class="col-md-6">
+          <label for="cep" class="form-label">CEP - Somente números</label>
+          <input type="number" class="form-control" id="cep">
+        </div>
+
+        <div class="col-md-9">
+          <label for="endereco" class="form-label">Endereço</label>
+          <input type="text" class="form-control" id="endereco" placeholder="">
+        </div>
+        <div class="col-md-3">
+          <label for="numero" class="form-label">Nº</label>
+          <input type="text" class="form-control" id="numero" placeholder="">
+        </div>
+        <div class="col-md-5">
+          <label for="bairro" class="form-label">Bairro</label>
+          <input type="text" class="form-control" id="bairro">
+        </div>
+        <div class="col-md-5">
+          <label for="cidade" class="form-label">Cidade</label>
+          <input type="text" class="form-control" id="cidade">
+        </div>
+        <div class="col-md-2">
+          <label for="estado" class="form-label">Estado</label>
+          <input type="text" class="form-control" id="estado">
+        </div>
+
+        <div class="selecione">
+          <legend class="selecione">Selecione abaixo o plano que deseja se inscrever </legend>
+
+          <fieldset class="row mb-12">
+            <div class="col-sm-12">
+              <div class="form-check">
+                <input type="radio" name="opcao" id="opcao1" value="opcao1">
+                <label for="opcao1">Plano Básico</label>
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input type="radio" name="opcao" id="opcao2" value="opcao2">
+                <label for="opcao2">Plano de Inglês para negócios</label>
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input type="radio" name="opcao" id="opcao3" value="opcao3">
+                <label for="opcao3"> Combo Inglês + Espanhol</label>
+                </label>
+              </div>
+          </fieldset>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feito com 💙 por Squad 10.</p>
+  </footer>
+  <script src="../js/script.js"></script>
+  <script src="../js/listaDeEspera.js"></script>

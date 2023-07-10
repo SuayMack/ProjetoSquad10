@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Para Suavisar a fonte */
+  -webkit-font-smoothing: antialiased;
+  /* Suavização da fonte para navegadores Webkit */
+  -moz-osx-font-smoothing: grayscale;
+  /* Suavização da fonte para navegadores Webkit */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(to right bottom, #0d0d0d, #1f202a, #2c3449, #334a6a, #32628c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(13, 13, 13, 0.5);
+  padding: 10px;
+  text-align: center;
+  color: rgba(191, 191, 191);
+}
+
+/* Estilos do header nav */
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+}
+
+/* Estilos dos links do header */
+header a {
+  text-decoration: none;
+  color: rgba(191, 191, 191);
+  transition: 0.8s;
+}
+
+/* Estilos dos links do header ao passar o mouse */
+header a:hover {
+  color: rgba(242, 242, 242);
+  letter-spacing: 2px;
+  transition: 0.8s;
+}
+
+/* Estilos das seções */
+section {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  color: rgba(191, 191, 191);
+  align-items: center;
+  gap: 50px;
+  padding-top: 30px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+
+/* Estilos dos parágrafos das seções */
+section p {
+  text-align: justify;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  padding: 50px;
+  height: 400px;
+}
+
+/* Estilos da classe selecione */
+.selecione {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  align-items: center;
+}
+
+/* Estilos do elemento .row */
+.row {
+  border: none;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Estilos do botão */
+.btn {
+  display: inline-block;
+  background-color: #011a35;
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid #007bff;
+  border-radius: 10px;
+}
+
+/* Estilos do footer */
+footer {
+  background-color: rgba(13, 13, 13, 0.5);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
