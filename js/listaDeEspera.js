@@ -1,7 +1,7 @@
 const nomeInput = document.getElementById('nome');
 const emailInput = document.getElementById('email');
 const senhaInput = document.getElementById('senha');
-const valSenhaInput = document.getElementById('valSenha');
+const valSenhaInput = document.getElementById('confSenha');
 const rgInput = document.getElementById('rg');
 const cepInput = document.getElementById('cep');
 const enderecoInput = document.getElementById('endereco');
@@ -19,48 +19,73 @@ function validarNome() {
 
   return true;
 }
-
 function validarEmail() {
+  //Obtém o valor digitado no campo de entrada de email e remove espaços em branco extras ao redor do valor usando o método trim(). O valor do campo de entrada é armazenado na variável email.
   const email = emailInput.value.trim();
+  //A função cria uma expressão regular chamada emailRegex. Expressões regulares são padrões de correspondência de texto usados para verificar se uma string atende a determinados critérios. Nesse caso, a expressão regular ^[^\s@]+@[^\s@]+\.[^\s@]+$ é usada.
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+  //A função usa o método test() da expressão regular emailRegex para verificar se o valor do email corresponde ao padrão definido. A função test() retorna true se a string corresponder ao padrão e false caso contrário.
   if (!emailRegex.test(email)) {
-    alert('Digite um email válido!');
+    //Se o valor do email não corresponder ao padrão definido pela expressão regular, isso significa que o email é inválido. Nesse caso, a função exibe um alerta informando ao usuário que ele deve digitar um email válido usando alert('Digite um email válido!'). Em seguida, a função retorna false, indicando que a validação falhou.
+    alert('Digite um email válido!');    
     return false;
   }
-
-  return true;
+  //Se o valor do email corresponder ao padrão definido pela expressão regular, isso significa que o email é válido. Nesse caso, a função retorna true, indicando que a validação foi bem-sucedida.
+  return true;  
 }
 
-nomeInput.addEventListener('blur', validarNome);
-emailInput.addEventListener('blur', validarEmail);
+nomeInput.addEventListener("change",  (e) => {
+  validarNome()
+  
+})
+emailInput.addEventListener("change", (e) => {
+  validarEmail()
 
-cepInput.addEventListener('keydown', async (event) => {
-  if (event.key === 'Enter') {
-    event.preventDefault(); // Impede o comportamento padrão de submissão do formulário
+})
 
-    const cep = cepInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos do CEP
 
-    if (cep.length === 8) {
-      const apiUrl = `https://viacep.com.br/ws/${cep}/json/`;
-
-      try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-
-        if (data.erro) {
-          console.log('CEP inválido');
-        } else {
-          enderecoInput.value = data.logradouro;
-          bairroInput.value = data.bairro;
-          cidadeInput.value = data.localidade;
-          estadoInput.value = data.uf;
-        }
-      } catch (error) {
-        console.log('Erro ao obter dados do CEP', error);
-      }
-    } else {
-      console.log('CEP inválido');
-    }
+senhaInput.addEventListener('change', event => {
+  if(senhaInput.value.length < 5){
+  
+    alert("Senha deve ter 5 ou mais caracteres.")
+  }  
+  
+})
+valSenhaInput.addEventListener('change', (e) => {
+  let senha= senhaInput.value
+  let confSenha= valSenhaInput.value
+  if(senha === confSenha ){
+  return true
+  
+  }  else{
+    alert("As senhas devem ser iguais.")
   }
-});
+  
+})
+
+cepInput.addEventListener("keyup", (e) => {
+  const cepValor = e.target.value
+  if(cepValor.length === 8){ 
+    receberEndereco(cepValor)
+  }else {
+    console.log('Digite um cep válido')
+  }
+})
+
+const receberEndereco = async(cep) => {
+  const apiUrl = `https://viacep.com.br/ws/${cep}/json`;
+
+  const resposta = await fetch(apiUrl)
+
+  const data = await resposta.json()
+  console.log(data)
+
+  if(data.erro === "true"){
+    alert('Cep inválido')
+  }
+
+  enderecoInput.value = data.logradouro;
+  bairroInput.value = data.bairro;
+  cidadeInput.value = data.localidade;
+  estadoInput.value = data.uf;
+}
