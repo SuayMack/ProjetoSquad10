@@ -1,0 +1,20 @@
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+    section {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+    
+    section p {
+      font-size: 18px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
