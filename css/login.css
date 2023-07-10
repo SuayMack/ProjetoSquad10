@@ -1,0 +1,44 @@
+main.form-signin.w-100.m-auto {
+  display: flex;
+  align-items: center;
+  /* align-content: space-around; */
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 30%;
+  min-width: 350px;
+  color: #f2f2f2;
+  padding: 20px;
+}
+
+form h1 {
+ text-align: center;
+}
+
+form label {
+  color: #1d4273;
+}
+
+form label.form-check-label {
+  color: #f2f2f2;
+}
+
+form div.form-check.text-start {
+  padding: 0;  
+  
+}
+
+form a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+form a:hover {
+  color: #bfbfbf;
+  transition: 0.5s;
+}
+
+
