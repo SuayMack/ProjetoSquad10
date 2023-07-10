@@ -6,7 +6,7 @@ body {
     padding: 0;
     background-image: linear-gradient(to right bottom, #0d0d0d, #1f202a, #2c3449, #334a6a, #32628c);
     font-family: 'Inter', sans-serif;
-    color: white;
+    color: #bfbfbf;
 }
 
 header {
@@ -32,7 +32,7 @@ main {
     align-items: center;
     padding: 40px;
     text-align: center;
-    color: white;
+    color: #bfbfbf;
     height: 500px;
     font-family: 'Inter', sans-serif;
     font-size: 20px;
@@ -48,7 +48,7 @@ main {
 .button {
     display: inline-block;
     background-color: #011a35;
-    color: #fff;
+    color: #bfbfbf;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 10px;
@@ -58,7 +58,7 @@ main {
 .button-enter {
     display: inline-block;
     background-color: #011a35;
-    color: #fff;
+    color: #bfbfbf;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 10px;

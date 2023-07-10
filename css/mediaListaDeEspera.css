@@ -1,20 +1,19 @@
 /* Media queries */
 
-@media screen and (max-width: 768px) {
-    section {
-      grid-template-columns: 1fr;
-      gap: 20px;
-      padding: 20px;
+@media screen and (max-width: 450px) {
+    header {
+      flex-direction: column;
+      font-size: small;
     }
-    
-    section p {
-      font-size: 18px;
+  
+    a {
+      padding: 5px;
     }
   }
   
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 750px) {
     header {
-      flex-direction: column;
-      text-align: center;
+      
+      font-size: small;
     }
   }
