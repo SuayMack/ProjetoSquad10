@@ -1,0 +1,12 @@
+@media screen and (max-width:768px) {
+    section.banner {
+        flex-direction: column-reverse;
+    }
+   
+
+}
+@media screen and (max-width:425px) {
+img.image {
+    width: 30%;
+}
+}
