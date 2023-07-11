@@ -14,12 +14,6 @@ singIn.addEventListener('click', event => {
   
 })
 
-// function validarSenha() {
-//   if(password.value.length < 5){
-//     alert("Senha deve ter 5 ou mais caracteres.")
-//   }
-// }
-
 function validarEmail() {
   //Obtém o valor digitado no campo de entrada de email e remove espaços em branco extras ao redor do valor usando o método trim(). O valor do campo de entrada é armazenado na variável email.
   const email = login.value.trim();
@@ -32,7 +26,5 @@ function validarEmail() {
     return false;
   }
   //Se o valor do email corresponder ao padrão definido pela expressão regular, isso significa que o email é válido. Nesse caso, a função retorna true, indicando que a validação foi bem-sucedida.
-  
-  return true;
-  
+  return true;  
 }
