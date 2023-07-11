@@ -17,15 +17,16 @@ const textoAntes3= plano3.innerHTML;
 function executarMudanca(plano,textoDepois,textoAntes){
   //evento para aparecer o novo texto quando o mouse entrar
   plano.addEventListener("mouseenter",function(){
-    plano.innerHTML=textoDepois;
+    plano.innerHTML=`<span style='font-size:14px'>${textoDepois}</span>`;
   })
   //evento para aparecer o velho texto quando o mouse sair
   plano.addEventListener("mouseleave",function(){
     plano.innerHTML=textoAntes;
   })
-  }
+}
 
-  //chamando os objetos e especificando onde vai cada um 
+//chamando os objetos e especificando onde vai cada um 
 executarMudanca(plano1,textoDepois1,textoAntes1);
 executarMudanca(plano2,textoDepois2,textoAntes2);
 executarMudanca(plano3,textoDepois3,textoAntes3);
+
