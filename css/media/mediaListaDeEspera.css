@@ -1,0 +1,21 @@
+/* Media queries */
+
+@media screen and (max-width: 450px) {
+    header {
+      flex-direction: column;
+      font-size: small;
+    }
+  section{
+    grid-template-columns: 1fr;
+  }
+    a {
+      padding: 5px;
+    }
+  }
+  
+  @media screen and (max-width: 750px) {
+    header {
+      
+      font-size: small;
+    }
+  }

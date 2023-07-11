@@ -1,0 +1,35 @@
+<<<<<<< HEAD
+@media screen and (max-width: 450px) {
+  header {
+    flex-direction: column;
+    font-size: small;
+=======
+@media screen and (max-width: 425px){
+  body {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: 20%;
+    font-size: small;
+    gap: 10px;
+>>>>>>> b808c0bc9fc66635dbbba868abc45591362cc185
+  }
+
+  a {
+    padding: 5px;
+  }
+<<<<<<< HEAD
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    
+    font-size: small;
+  }
+=======
+>>>>>>> b808c0bc9fc66635dbbba868abc45591362cc185
+}
