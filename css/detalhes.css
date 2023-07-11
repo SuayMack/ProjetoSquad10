@@ -1,10 +1,11 @@
 body{
+
   color: rgba(191,191,191);
 }
 
 section {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
   gap: 20px;
@@ -18,8 +19,9 @@ h2{
 
 .card {
   display: flex;
-  width: 300px;
-  height: 350px;
+  width: 25%;
+  min-width: 200px;
+  height:350px;
   position: relative;
   gap: 20px;
   padding: 20px;
@@ -32,8 +34,8 @@ h2{
 .card::before{
   content: "";
   position: absolute;
-  width: 300px;
-  height: 350px;  
+  width: 25%;
+  height:350px;
   top: -50%;
   left: -50%;
   border-radius: 8px;
@@ -45,7 +47,7 @@ h2{
 .card::after{
   content: "";
   position: absolute;
-  width: 300px;
+  width: 25%;
   height: 350px;  
   top: -50%;
   left: -50%;
@@ -96,9 +98,12 @@ h2{
   inset: 2px;
   background: #3a455c;
   z-index: 10;
-  padding: 50px 40px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
+
+
+
