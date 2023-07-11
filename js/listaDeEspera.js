@@ -27,52 +27,63 @@ function validarEmail() {
   //A função usa o método test() da expressão regular emailRegex para verificar se o valor do email corresponde ao padrão definido. A função test() retorna true se a string corresponder ao padrão e false caso contrário.
   if (!emailRegex.test(email)) {
     //Se o valor do email não corresponder ao padrão definido pela expressão regular, isso significa que o email é inválido. Nesse caso, a função exibe um alerta informando ao usuário que ele deve digitar um email válido usando alert('Digite um email válido!'). Em seguida, a função retorna false, indicando que a validação falhou.
-    alert('Digite um email válido!');    
+    alert('Digite um email válido!');
     return false;
   }
   //Se o valor do email corresponder ao padrão definido pela expressão regular, isso significa que o email é válido. Nesse caso, a função retorna true, indicando que a validação foi bem-sucedida.
-  return true;  
+  return true;
 }
 
-nomeInput.addEventListener("change",  (e) => {
+nomeInput.addEventListener("change", (e) => {
   validarNome()
-  
+
 })
 emailInput.addEventListener("change", (e) => {
   validarEmail()
 
 })
+function validarRG() {
+  const rg = rgInput.value.trim();
 
+  if (rg.length !== 8) {
+    alert('O RG deve ter exatamente 8 caracteres!');
+    return false;
+  }
+
+  return true;
+}
+
+rgInput.addEventListener('blur', validarRG);
 
 senhaInput.addEventListener('change', event => {
-  if(senhaInput.value.length < 5){
-  
+  if (senhaInput.value.length < 5) {
+
     alert("Senha deve ter 5 ou mais caracteres.")
-  }  
-  
+  }
+
 })
 valSenhaInput.addEventListener('change', (e) => {
-  let senha= senhaInput.value
-  let confSenha= valSenhaInput.value
-  if(senha === confSenha ){
-  return true
-  
-  }  else{
+  let senha = senhaInput.value
+  let confSenha = valSenhaInput.value
+  if (senha === confSenha) {
+    return true
+
+  } else {
     alert("As senhas devem ser iguais.")
   }
-  
+
 })
 
 cepInput.addEventListener("keyup", (e) => {
   const cepValor = e.target.value
-  if(cepValor.length === 8){ 
+  if (cepValor.length === 8) {
     receberEndereco(cepValor)
-  }else {
+  } else {
     console.log('Digite um cep válido')
   }
 })
 
-const receberEndereco = async(cep) => {
+const receberEndereco = async (cep) => {
   const apiUrl = `https://viacep.com.br/ws/${cep}/json`;
 
   const resposta = await fetch(apiUrl)
@@ -80,7 +91,7 @@ const receberEndereco = async(cep) => {
   const data = await resposta.json()
   console.log(data)
 
-  if(data.erro === "true"){
+  if (data.erro === "true") {
     alert('Cep inválido')
   }
 
