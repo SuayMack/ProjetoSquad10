@@ -12,17 +12,19 @@
 }
 
 body {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-image: linear-gradient(to right bottom, #0d0d0d, #1f202a, #2c3449, #334a6a, #32628c);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  background-attachment: fixed;
   font-family: 'Inter', sans-serif;
 }
 
 header {
+  height: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,10 +35,10 @@ header {
 }
 
 header nav {
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 80%;
 }
 
 header a {
@@ -52,13 +54,14 @@ header a:hover {
 }
 
 main {
+  height: 85%;
   padding: 20px;
 }
 
 footer {
+  width: 100%;
   background-color: rgba(13, 13, 13, 0.5);
   color: #fff;
   padding: 20px;
   text-align: center;
-  width: 100%;
 }

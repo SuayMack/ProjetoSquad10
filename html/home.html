@@ -5,31 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href=".. /css/media.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/media/mediaHome.css">
+    <link rel="stylesheet" href="../css/home.css">
+
+    <!-- css pluguin jquery -->
+    <link href="../css/flipTimer.css" rel="stylesheet">
+    <!-- pluguin jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../js/jquery.flipTimer.js"></script>
  
     <title></title>
   </head>
   <body>
     <header>
       <h1>WORDSTREAM</h1>
-      <nav>
-        <a href="./index.html">Home</a>
+      <nav>        
         <a href="./html/detalhe.html">Detalhes</a>
-        <a href="./html/listaEspera.html">Cadastro</a>
-        <a href="./html/contato.html">Contato</a>
-        <a href="./html/login.html">Login</a>
+        <a href="#" id="aulas"></a>
+        <a href="#" id="configuracoes"></a>
+        <a href="./index.html">Logout</a>
       </nav>      
     </header>
     <main>      
-      <section> 
-        <p id="temporizador"></p>     
-        <h2></h2>
-        <span></span>
+      <section>
+        <h2>SUAS AULAS COMEÇAM EM</h2>
+        <div class="flipTimer">
+          <div class="days"></div>
+          <span>:</span>
+          <div class="hours"></div>
+          <span>:</span>
+          <div class="minutes"></div>
+          <span>:</span>
+          <div class="seconds"></div>
+        </div>        
       </section>
     </main>
     <footer>
       <p>Feito com 💙 por Squad 10.</p>
     </footer>
-    <script src="../js/home.js"></script>
+    <script src="../js/home.js">
+      
+    </script>
   </body>
+  
 </html>

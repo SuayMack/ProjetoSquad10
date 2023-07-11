@@ -1,0 +1,13 @@
+@media screen and (max-width: 425px){
+
+  main h2, h2#dias, h2#horas,
+  h2#minutos, h2#segundos {
+    font-size: 1.8rem;
+    padding: 10px;
+  }
+
+  .tempo span {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+}
