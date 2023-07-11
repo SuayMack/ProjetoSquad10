@@ -35,54 +35,53 @@
         Você quer expandir seus horizontes?
         Não perca a oportunidade de se cadastrar em nosso curso, oferecemos diversos pacotes.
         Inscreva-se agora em nossa lista de espera para saber mais sobre nossos planos e preços.
-
       </p>
 
       <form id="formEndereco" class="row g-3">
         <div class="col-md-6">
           <label for="nome" class="form-label">Nome completo</label>
-          <input type="nome" class="form-control" id="nome">
+          <input type="nome" class="form-control" id="nome" required>
         </div>
         <div class="col-md-6">
           <label for="email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="email">
+          <input type="email" class="form-control" id="email" required>
         </div>
         <div class="col-md-6">
           <label for="senha" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="senha">
+          <input type="password" class="form-control" id="senha" required>
         </div>
         <div class="col-md-6">
           <label for="confSenha" class="form-label">Confirmação de senha</label>
-          <input type="password" class="form-control" id="confSenha">
+          <input type="password" class="form-control" id="confSenha" required>
         </div>
         <div class="col-md-6">
           <label for="rg" class="form-label">RG</label>
-          <input type="rg" class="form-control" id="rg">
+          <input type="rg" class="form-control" id="rg" required>
         </div>
         <div class="col-md-6">
           <label for="cep" class="form-label">CEP - Somente números</label>
-          <input type="number" class="form-control" id="cep">
+          <input type="number" class="form-control" id="cep" required>
         </div>
 
         <div class="col-md-9">
           <label for="endereco" class="form-label">Endereço</label>
-          <input type="text" class="form-control" id="endereco" placeholder="">
+          <input type="text" class="form-control" id="endereco" placeholder="" required>
         </div>
         <div class="col-md-3">
           <label for="numero" class="form-label">Nº</label>
-          <input type="text" class="form-control" id="numero" placeholder="">
+          <input type="text" class="form-control" id="numero" placeholder="" required>
         </div>
         <div class="col-md-5">
           <label for="bairro" class="form-label">Bairro</label>
-          <input type="text" class="form-control" id="bairro">
+          <input type="text" class="form-control" id="bairro" required>
         </div>
         <div class="col-md-5">
           <label for="cidade" class="form-label">Cidade</label>
-          <input type="text" class="form-control" id="cidade">
+          <input type="text" class="form-control" id="cidade" required>
         </div>
         <div class="col-md-2">
           <label for="estado" class="form-label">Estado</label>
-          <input type="text" class="form-control" id="estado">
+          <input type="text" class="form-control" id="estado" required>
         </div>
         <div class="selecione">
           <legend class="selecione">Selecione abaixo o plano que deseja se inscrever </legend>
@@ -95,7 +94,7 @@
               </div>
 
               <div class="form-check">
-                <input type="radio" name="planos" id="opcao2" value="opcao2">
+                <input type="radio" name="planos" id="opcao2" value="opcao2" required>
                 <label for="opcao2">Plano de Inglês para negócios</label>                
               </div>
 
