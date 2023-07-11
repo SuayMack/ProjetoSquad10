@@ -8,6 +8,7 @@ const enderecoInput = document.getElementById('endereco');
 const bairroInput = document.getElementById('bairro');
 const cidadeInput = document.getElementById('cidade');
 const estadoInput = document.getElementById('estado');
+const btnEnviar = document.getElementById('btnEnviar');
 
 function validarNome() {
   const nomeCompleto = nomeInput.value.trim();
@@ -16,9 +17,9 @@ function validarNome() {
     alert('Digite o nome completo com espaço e sobrenome!');
     return false;
   }
-
   return true;
 }
+
 function validarEmail() {
   //Obtém o valor digitado no campo de entrada de email e remove espaços em branco extras ao redor do valor usando o método trim(). O valor do campo de entrada é armazenado na variável email.
   const email = emailInput.value.trim();
@@ -34,14 +35,20 @@ function validarEmail() {
   return true;
 }
 
+// btnEnviar.addEventListener("click", (e) =>{
+//   for(element)
+//   e.preventDefault()
+//   window.location.href = "../html/home.html";
+// })
+
 nomeInput.addEventListener("change", (e) => {
   validarNome()
 
 })
 emailInput.addEventListener("change", (e) => {
   validarEmail()
-
 })
+
 function validarRG() {
   const rg = rgInput.value.trim();
 

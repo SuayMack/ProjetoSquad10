@@ -19,14 +19,12 @@
 
 <body>
   <header id="nav">
-    <h1>WORDSTREAM</h1>
+    <a href="../index.html"><h1>WORDSTREAM</h1></a>
     <span class="material-symbols-outlined">
     </span>
     <nav>
-      <a href="./index.html">Home</a>
-      <a href="./html/detalhe.html">Detalhes</a>
-      <a href="../html/cadastro.html">Cadastro</a>
-      <a href="../html/listaDeEspera.html">Contato</a>
+      <a href="./detalhes.html">Detalhes</a>
+      <a href="./listaDeEspera.html">Contato</a>
       <a href="./html/login.html">Login</a>
     </nav>
   </header>
@@ -54,7 +52,7 @@
           <input type="password" class="form-control" id="senha">
         </div>
         <div class="col-md-6">
-          <label for="ConfSenha" class="form-label">Confirmação de senha</label>
+          <label for="confSenha" class="form-label">Confirmação de senha</label>
           <input type="password" class="form-control" id="confSenha">
         </div>
         <div class="col-md-6">
@@ -86,28 +84,24 @@
           <label for="estado" class="form-label">Estado</label>
           <input type="text" class="form-control" id="estado">
         </div>
-
         <div class="selecione">
           <legend class="selecione">Selecione abaixo o plano que deseja se inscrever </legend>
 
           <fieldset class="row mb-12">
             <div class="col-sm-12">
               <div class="form-check">
-                <input type="radio" name="opcao" id="opcao1" value="opcao1">
-                <label for="opcao1">Plano Básico</label>
-                </label>
+                <input type="radio" name="planos" id="opcao1" value="opcao1">
+                <label for="opcao1">Plano Básico</label>                
               </div>
 
               <div class="form-check">
-                <input type="radio" name="opcao" id="opcao2" value="opcao2">
-                <label for="opcao2">Plano de Inglês para negócios</label>
-                </label>
+                <input type="radio" name="planos" id="opcao2" value="opcao2">
+                <label for="opcao2">Plano de Inglês para negócios</label>                
               </div>
 
               <div class="form-check">
-                <input type="radio" name="opcao" id="opcao3" value="opcao3">
-                <label for="opcao3"> Combo Inglês + Espanhol</label>
-                </label>
+                <input type="radio" name="planos" id="opcao3" value="opcao3">
+                <label for="opcao3"> Combo Inglês + Espanhol</label>                
               </div>
           </fieldset>
         </div>
