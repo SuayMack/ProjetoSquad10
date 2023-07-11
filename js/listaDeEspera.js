@@ -35,11 +35,10 @@ function validarEmail() {
   return true;
 }
 
-// btnEnviar.addEventListener("click", (e) =>{
-//   for(element)
-//   e.preventDefault()
-//   window.location.href = "../html/home.html";
-// })
+btnEnviar.addEventListener("click", (e) =>{
+  e.preventDefault()
+  window.location.href = "../html/home.html";
+})
 
 nomeInput.addEventListener("change", (e) => {
   validarNome()
