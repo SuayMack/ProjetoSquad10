@@ -1,28 +1,39 @@
-const nomeInput = document.getElementById('nome');
-const emailInput = document.getElementById('email');
-const senhaInput = document.getElementById('senha');
-const valSenhaInput = document.getElementById('confSenha');
-const rgInput = document.getElementById('rg');
-const cepInput = document.getElementById('cep');
-const enderecoInput = document.getElementById('endereco');
-const bairroInput = document.getElementById('bairro');
-const cidadeInput = document.getElementById('cidade');
-const estadoInput = document.getElementById('estado');
-const btnEnviar = document.getElementById('btnEnviar');
+// Mapeamento dos elementos do formulário em um objeto chamado "cadastro"
+const cadastro = {
+  nomeInput: document.getElementById('nome'),           // Campo de entrada do nome
+  emailInput: document.getElementById('email'),         // Campo de entrada do email
+  senhaInput: document.getElementById('senha'),         // Campo de entrada da senha
+  valSenhaInput: document.getElementById('confSenha'),  // Campo de entrada de validação de senha
+  rgInput: document.getElementById('rg'),               // Campo de entrada do RG
+  cepInput: document.getElementById('cep'),             // Campo de entrada do CEP
+  enderecoInput: document.getElementById('endereco'),   // Campo de entrada do endereço
+  numeroInput: document.getElementById('numero'),       // Campo de entrada do número
+  bairroInput: document.getElementById('bairro'),       // Campo de entrada do bairro
+  cidadeInput: document.getElementById('cidade'),       // Campo de entrada da cidade
+  estadoInput: document.getElementById('estado'),       // Campo de entrada do estado
+  btnEnviar: document.getElementById('btnEnviar'),      // Botão de envio do formulário
+  radioInput: document.getElementsByName('planos'),    // Opções de rádio para planos
+};
 
 function validarNome() {
-  const nomeCompleto = nomeInput.value.trim();
-
+  const nomeCompleto = cadastro.nomeInput.value.trim();
   if (nomeCompleto.indexOf(' ') === -1) {
     alert('Digite o nome completo com espaço e sobrenome!');
-    return false;
   }
   return true;
 }
 
+function validarNome(value) {
+    const nomeCompleto = value.trim();
+    if (nomeCompleto.indexOf(' ') === -1) {
+      alert('Digite o nome completo com espaço e sobrenome!');
+    }
+    return true;
+  }
+
 function validarEmail() {
   //Obtém o valor digitado no campo de entrada de email e remove espaços em branco extras ao redor do valor usando o método trim(). O valor do campo de entrada é armazenado na variável email.
-  const email = emailInput.value.trim();
+  const email = cadastro.emailInput.value.trim();
   //A função cria uma expressão regular chamada emailRegex. Expressões regulares são padrões de correspondência de texto usados para verificar se uma string atende a determinados critérios. Nesse caso, a expressão regular ^[^\s@]+@[^\s@]+\.[^\s@]+$ é usada.
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   //A função usa o método test() da expressão regular emailRegex para verificar se o valor do email corresponde ao padrão definido. A função test() retorna true se a string corresponder ao padrão e false caso contrário.
@@ -35,42 +46,24 @@ function validarEmail() {
   return true;
 }
 
-btnEnviar.addEventListener("click", (e) =>{
-  e.preventDefault()
-  window.location.href = "../html/home.html";
+cadastro.nomeInput.addEventListener("focusout", (e) => {
+  if(!validarNome(cadastro.nomeInput.value)){
+    e.preventDefault()
+    cadastro.nomeInput.focus()
+  }
 })
-
-nomeInput.addEventListener("change", (e) => {
-  validarNome()
-
-})
-emailInput.addEventListener("change", (e) => {
+cadastro.emailInput.addEventListener("change", (e) => {
   validarEmail()
 })
 
-function validarRG() {
-  const rg = rgInput.value.trim();
-
-  if (rg.length !== 8) {
-    alert('O RG deve ter exatamente 8 caracteres!');
-    return false;
-  }
-
-  return true;
-}
-
-rgInput.addEventListener('blur', validarRG);
-
-senhaInput.addEventListener('change', event => {
-  if (senhaInput.value.length < 5) {
-
+cadastro.senhaInput.addEventListener('change', event => {
+  if (cadastro.senhaInput.value.length < 5) {
     alert("Senha deve ter 5 ou mais caracteres.")
   }
-
 })
-valSenhaInput.addEventListener('change', (e) => {
-  let senha = senhaInput.value
-  let confSenha = valSenhaInput.value
+cadastro.valSenhaInput.addEventListener('change', (e) => {
+  let senha = cadastro.senhaInput.value
+  let confSenha = cadastro.valSenhaInput.value
   if (senha === confSenha) {
     return true
 
@@ -80,7 +73,7 @@ valSenhaInput.addEventListener('change', (e) => {
 
 })
 
-cepInput.addEventListener("keyup", (e) => {
+cadastro.cepInput.addEventListener("keyup", (e) => {
   const cepValor = e.target.value
   if (cepValor.length === 8) {
     receberEndereco(cepValor)
@@ -100,9 +93,32 @@ const receberEndereco = async (cep) => {
   if (data.erro === "true") {
     alert('Cep inválido')
   }
-
-  enderecoInput.value = data.logradouro;
-  bairroInput.value = data.bairro;
-  cidadeInput.value = data.localidade;
-  estadoInput.value = data.uf;
+  cadastro.enderecoInput.value = data.logradouro;
+  cadastro.bairroInput.value = data.bairro;
+  cadastro.cidadeInput.value = data.localidade;
+  cadastro.estadoInput.value = data.uf;
 }
+
+document.getElementById("formEndereco").addEventListener("submit", function (event) {
+  event.preventDefault(); // Impedir a submissão padrão do formulário
+
+  // Variável para acompanhar se todos os campos obrigatórios estão preenchidos
+  let allFieldsValid = true;
+
+  for (let field in cadastro) {
+    if (cadastro[field].required && cadastro[field].value.trim() === "") {
+      allFieldsValid = false; // Pelo menos um campo obrigatório não está preenchido
+      break; // Não é necessário verificar os outros campos
+    }
+  }
+
+  if (!allFieldsValid) {
+    alert("Todos os campos obrigatórios devem ser preenchidos.");
+  } else {
+    // Redirecionar somente se todos os campos obrigatórios estiverem preenchidos
+    formEndereco.reset();
+    window.location.href = "../html/home.html";
+  }
+});
+
+
