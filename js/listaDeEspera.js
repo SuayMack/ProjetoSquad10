@@ -61,7 +61,7 @@ cadastro.senhaInput.addEventListener('change', event => {
     alert("Senha deve ter 5 ou mais caracteres.")
   }
 })
-cadastro.valSenhaInput.addEventListener('change', (e) => {
+const validaSenha = cadastro.valSenhaInput.addEventListener('change', (e) => {
   let senha = cadastro.senhaInput.value
   let confSenha = cadastro.valSenhaInput.value
   if (senha === confSenha) {
@@ -70,7 +70,6 @@ cadastro.valSenhaInput.addEventListener('change', (e) => {
   } else {
     alert("As senhas devem ser iguais.")
   }
-
 })
 
 cadastro.cepInput.addEventListener("keyup", (e) => {
@@ -116,8 +115,13 @@ document.getElementById("formEndereco").addEventListener("submit", function (eve
     alert("Todos os campos obrigatórios devem ser preenchidos.");
   } else {
     // Redirecionar somente se todos os campos obrigatórios estiverem preenchidos
-    formEndereco.reset();
-    window.location.href = "../html/home.html";
+    if(validaSenha){
+      formEndereco.reset();
+      window.location.href = "../html/home.html";
+    }else {
+      alert("Preencha os campos Senha e Confirmação de senha corretamente.")
+    }
+    
   }
 });
 
