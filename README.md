@@ -12,7 +12,7 @@
 
 O projeto **WORDSTREAM** é um front end para apresentar uma plataforma de serviço por assinatura para idiomas em que as pessoas usuárias precisam entrar em uma lista de espera.
 
-O projeto **WORDSTREAM** foi solicitado na **Formação Web Dev Fullstack** com o intuito de colocarmos em prática todo conteúdo estudado no módulo 2 do curso.
+O projeto **WORDSTREAM** foi solicitado na **Formação Web Dev Fullstack - Resilia** com o intuito de colocarmos em prática todo conteúdo estudado no módulo 2 do curso.
 
 Todo o código está comentado com as explicações do que foi feito no projeto e as escolhas que tomamos.
 
