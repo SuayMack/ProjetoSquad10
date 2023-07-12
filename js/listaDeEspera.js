@@ -115,12 +115,10 @@ document.getElementById("formEndereco").addEventListener("submit", function (eve
     alert("Todos os campos obrigatórios devem ser preenchidos.");
   } else {
     // Redirecionar somente se todos os campos obrigatórios estiverem preenchidos
-    if(validaSenha){
+    
       formEndereco.reset();
       window.location.href = "../html/home.html";
-    }else {
-      alert("Preencha os campos Senha e Confirmação de senha corretamente.")
-    }
+    
     
   }
 });
