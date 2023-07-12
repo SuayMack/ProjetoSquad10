@@ -18,6 +18,7 @@ function validarEmail() {
     alert('Digite um email válido!');    
     return false;
   }
+  alert("Email enviado com sucesso!")
   //Se o valor do email corresponder ao padrão definido pela expressão regular, isso significa que o email é válido. Nesse caso, a função retorna true, indicando que a validação foi bem-sucedida.
   window.location.href = "../html/login.html";
   return true;
