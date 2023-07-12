@@ -75,6 +75,11 @@ section p {
 
 }
 
+section .required:after {
+  content: "*" ;
+  color: red;
+  padding-left: 5px ;
+}
 /* Estilos da classe selecione */
 .selecione {
   font-family: 'Inter', sans-serif;
